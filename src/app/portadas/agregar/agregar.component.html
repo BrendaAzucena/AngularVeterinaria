@@ -1,0 +1,42 @@
+<app-header></app-header>
+
+  <a href="http://localhost:4200/cliente" class="col"><i class="bi bi-arrow-left-short" style="font-size: 3em;"> </i></a>
+
+  <h3 class="text-center"> Nuevo Cliente</h3>
+
+  <div class="container">
+      <form [formGroup]="FormCliente" (submit)="enviar()" ngNativeValidate>
+        <div class="form-group">
+          <label for="">Nombre</label>
+          <input required type="text" name="" formControlName="nombre" id="" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="">Apellido Paterno</label>
+            <input required type="text" name="" formControlName="apellidoP" id="" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Apellido Materno</label>
+            <input required type="text" name="" formControlName="apellidoM" id="" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Telefono</label>
+            <input required type="text" name="" formControlName="telefono" id="" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Sexo</label>
+            <input required type="text" name="" formControlName="sexo" id="" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Edad</label>
+            <input required type="text" name="" formControlName="edad" id="" class="form-control">
+          </div>
+
+          <br>
+          
+        <button class="centrado">Agregar</button>
+      </form>
+  </div>
+  
+      <br>
+
+      <app-footer></app-footer>

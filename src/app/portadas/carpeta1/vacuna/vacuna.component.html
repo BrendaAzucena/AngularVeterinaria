@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+    <a href="http://localhost:4200/inicio" class="col"><i class="bi bi-arrow-left-short" style="font-size: 3em;"> </i></a>
+
+    <h3 class="text-center"><b>Lista Vacunas</b></h3>
+
+    <br>
+
+    <table class="table">
+        <thead style="color:DarkCyan" class="text-center" >
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr *ngFor="let Vacuna of vacuna let iControl=index" >
+            <th scope="row">{{Vacuna.idVacuna}}</th>
+            <td>{{Vacuna.nombreV}}</td>
+            <td>
+              <a class="btn btn-warning" (click)="editar(Vacuna.idVacuna)"><i class="bi bi-pen"></i></a>
+           </td>
+           <td>
+              <a class="btn btn-danger" (click)="borrar(Vacuna.idVacuna,iControl)"><i class="bi bi-trash"></i></a>
+           </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div>
+        <button class="centrado" (click)="EntrAgregar()">Nueva Vacuna</button>
+      </div>
+
+      <br>
+       
+        <br>
+
+        <app-footer></app-footer>

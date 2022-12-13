@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+    <a href="http://localhost:4200/inicio" class="col"><i class="bi bi-arrow-left-short" style="font-size: 3em;"> </i></a>
+
+    <h3 class="text-center"><b>Lista Masotas</b></h3>
+
+    <br>
+    
+    <table class="table">
+        <thead style="color:DarkCyan" class="text-center" >
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre de Mascota</th>
+            <th scope="col">Raza</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Color</th>
+            <th scope="col">Fecha de Nacimiento</th>
+            <th scope="col">Id Cliente</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr *ngFor="let Mascota of mascota ; let iControl=index">
+            <th scope="row">{{Mascota.idMascota}}</th>
+            <td>{{Mascota.nombreM}}</td>
+            <td>{{Mascota.tipoM}}</td>
+            <td>{{Mascota.sexo}}</td>
+            <td>{{Mascota.color}}</td>
+            <td>{{Mascota.fechaN}}</td>
+            <td>{{Mascota.Cliente_idCliente}}</td>
+            <td>
+              <a class="btn btn-warning" (click)="editar(Mascota.idMascota)"><i class="bi bi-pen"></i></a>
+           </td>
+           <td>
+              <a class="btn btn-danger" (click)="borrar(Mascota.idMascota,iControl)"><i class="bi bi-trash"></i></a>
+           </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+      
+      <div>
+        <button class="centrado" (click)="EntAgregar()">Agregar</button>
+      </div>
+      <br>
+      <div>
+
+        <br>
+
+        <app-footer></app-footer>

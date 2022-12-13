@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <a href="http://localhost:4200/cliente"><i class="bi bi-arrow-left-short" style="font-size: 3em;"> </i></a>
+
+<h1 class="text-center">VETERINARIA</h1>
+
+<br>
+
+<div id="tour" class="bg-1">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="../../../assets/Img/cl.jpg"  width="400" height="300">
+          <p><strong>Cliente</strong></p>
+          <button class="btn" (click)="cliente()">Entrar</button>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="../../../assets/Img/mas.jpg"  width="400" height="300">
+          <p><strong>Mascota</strong></p>
+          <button class="btn" (click)="mascota()">Entrar</button>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="../../../assets/Img/va.jpeg" width="400" height="300">
+          <p><strong>Vacuna</strong></p>
+          <button class="btn" (click)="vacuna()" >Entrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="../../../assets/Img/vete.jpg"  width="400" height="300">
+          <p><strong>Veterinario</strong></p>
+          <button class="btn" (click)="veterinario()">Entrar</button>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="../../../assets/Img/consul.jpg"  width="400" height="300">
+          <p><strong>Consulta</strong></p>
+          <button class="btn" (click)="consulta()">Entrar</button>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="../../../assets/Img/med.jpg" width="400" height="300">
+          <p><strong>Medicina</strong></p>
+          <button class="btn" (click)="medicina()">Entrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

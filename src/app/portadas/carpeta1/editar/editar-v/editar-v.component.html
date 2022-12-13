@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+  <a href="http://localhost:4200/vacuna" class="col"><i class="bi bi-arrow-left-short" style="font-size: 3em;"> </i></a>
+
+  <h3 class="text-center">Editar Vacuna</h3>
+
+  <br>
+
+  <div class="container">
+      <form [formGroup]="forvacuna" (ngSubmit)="put()" ngNativeValidate>
+        <div class="form-group">
+          <label>Nombre de la Vacuna</label>
+          <input type="text" required formControlName="nombreV" id="" class="form-control">
+        </div>
+          <br>
+        <button class="centrado">Guardar Cambios</button>
+      </form>
+  </div>
+
+      <br>
+
+      <app-footer></app-footer>
+

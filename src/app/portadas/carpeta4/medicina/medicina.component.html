@@ -1,0 +1,112 @@
+<app-header></app-header>
+
+    <a href="http://localhost:4200/inicio" class="col"><i class="bi bi-arrow-left-short" style="font-size: 3em;"> </i></a>
+
+    <h3 class="text-center"><b>Lista Medicinas</b></h3>
+
+    <br>
+    
+    <table class="table">
+        <thead style="color:DarkCyan" class="text-center" >
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre de la Medicina</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Codigo de la Medicina</th>
+            <th scope="col">Presentacion</th>
+            <th scope="col">Num. Generico</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr *ngFor="let Medicina of medicinas; let iControl=index">
+            <th scope="row">{{Medicina.idMedicina}}</th>
+            <td>{{Medicina.nombreM}}</td>
+            <td>{{Medicina.costo}}</td>
+            <td>{{Medicina.codigoM}}</td>
+            <td>{{Medicina.presentacion}}</td>
+            <td>{{Medicina.NGenerico}}</td>
+            <td>
+              <a class="btn btn-warning" (click)="editar(Medicina.idMedicina)"><i class="bi bi-pen"></i></a>
+           </td>
+           <td>
+            <a class="btn btn-danger" (click)="eliminar(Medicina.idMedicina,iControl)"><i class="bi bi-trash"></i></a>
+         </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+      
+      <div>
+        <button class="centrado" (click)="AgregarMedi()">Agregar nueva</button>
+      </div>
+      <br>
+      <div>
+
+        <br>
+
+        
+        <footer class="text-center text-white" style="background-color: #000000;">
+          <div class="container p-4">
+            <section class="">
+              <div class="row">
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                  <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                    <img src="../../../assets/Img/1.webp" class="w-100"/>
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                  <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                    <img src="../../../assets/Img/2.webp"class="w-100"/>
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                  <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                    <img src="../../../assets/Img/3.webp" class="w-100"/>
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                  <div
+                    class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                    data-ripple-color="light">
+                    <img src="../../../assets/Img/4.webp"class="w-100" />
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                  <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                    <img src="../../../assets/Img/5.webp" class="w-100"/>
+                    <a href="#!">
+                      <div class="mask"style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                  <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                    <img src="../../../assets/Img/6.jpg" class="w-100"/>
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);"> VETERINARIA
+            <br>
+            <i class="bi bi-person">Blanca Azucena</i>
+          </div>
+        </footer>
+

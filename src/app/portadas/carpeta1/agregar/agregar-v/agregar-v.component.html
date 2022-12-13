@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<a href="http://localhost:4200/vacuna"  class="col"><i class="bi bi-arrow-left-short" style="font-size: 3em;"> </i></a>
+
+<h3 class="text-center">Nuevo Vacuna</h3>
+
+<br>
+
+  <div class="container">
+      <form [formGroup]="FormVacuna" (submit)="agregar()">
+        <div class="form-group">
+          <label for="">Nombre de la vacuna</label>
+          <input type="text" name="" formControlName="nombreV" id="" class="form-control">
+        </div>
+          <br>
+        <button class="centrado" >Agregar</button>
+      </form>
+  </div>
+  
+      <br>
+
+      <app-footer></app-footer>

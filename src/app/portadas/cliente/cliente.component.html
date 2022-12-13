@@ -1,0 +1,47 @@
+<app-header></app-header>
+
+    <a href="http://localhost:4200/inicio" class="col"><i class="bi bi-arrow-left-short" style="font-size: 3em;"> </i></a>
+
+  <h3 class="text-center"><b>Lista Clientes</b></h3>
+
+<br>
+
+    <table class="table">
+        <thead style="color:DarkCyan" class="text-center" >
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre </th>
+            <th scope="col">Apellido Paterno</th>
+            <th scope="col">Apellido Materno</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Edad</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr *ngFor="let Cliente of clientes; let iControl=index">
+            <th scope="row">{{Cliente.idCliente}}</th>
+            <td>{{Cliente.nombre}}</td>
+            <td>{{Cliente.apellidoP}}</td>
+            <td>{{Cliente.apellidoM}}</td>
+            <td>{{Cliente.telefono}}</td>
+            <td>{{Cliente.sexo}}</td>
+            <td>{{Cliente.edad}}</td>
+            <td>
+               <a class="btn btn-warning" (click)="editar(Cliente.idCliente)"><i class="bi bi-pen"></i></a>
+            </td>
+            <td>
+               <a class="btn btn-danger" (click)="borrar(Cliente.idCliente,iControl)"><i class="bi bi-trash"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+
+        <button routerLink="../agregar" class="centrado">Nuevo Cliente</button>
+       
+        <br>
+<br>
+
+      <app-footer></app-footer>
